@@ -1,10 +1,11 @@
 
+
 Create a grammar for a small language using BNF that accepts a program code that
 - Starts with the special word begin
 - Followed by one or more assignment statements, wherein each statement ends with a semicolon 
 - After the last statement, the code should end with the special word end
 
-Grammar:
+**Grammar:**
 ```
 <programcode> 	-> 	begin <stmts> end
       <stmts> 	-> 	<assign> ; | <assign> ; <stmts>
@@ -20,7 +21,7 @@ Derive the statement below and create a parse tree for it:
 begin B = C * A + B * B ; C = ( B * C + A ) ; end
 ```
 
-Derivation:
+**Derivation:**
 ```
 <programcode>	->	begin <stmts> end
 				-> 	begin <assign> ; <stmts> end
@@ -43,3 +44,6 @@ Derivation:
 				->	begin B = C * A + B * B ; C = ( B * C + <var> ) ; end
 				->	begin B = C * A + B * B ; C = ( B * C + A ) ; end
 ```
+
+**Parse tree:**
+![syntax_exercise parse tree](https://cdn.discordapp.com/attachments/848100905580232734/900001037409189948/AZ03pabc5xUAAAAAElFTkSuQmCC.png)
