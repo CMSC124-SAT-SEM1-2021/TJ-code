@@ -24,25 +24,25 @@ begin B = C * A + B * B ; C = ( B * C + A ) ; end
 **Derivation:**
 ```
 <programcode>	->	begin <stmts> end
-				-> 	begin <assign> ; <stmts> end
-				->	begin <var> = <expr> ; <stmts> end
-				->	begin B = <expr> ; <stmts> end
-				->	begin B = <var> * <expr> ; <stmts> end
-				->	begin B = C * <expr> ; <stmts> end
-				->	begin B = C * <var> + <expr> ; <stmts> end
-				->	begin B = C * A + <expr> ; <stmts> end
-				->	begin B = C * A + <var> * <expr> ; <stmts> end
-				->	begin B = C * A + B * <expr> ; <stmts> end
-				->	begin B = C * A + B * <var> ; <stmts> end
-				->	begin B = C * A + B * B ; <stmts> end
-				->	begin B = C * A + B * B ; <assign> ; end
-				->	begin B = C * A + B * B ; <var> = ( <expr> ) ; end
-				->	begin B = C * A + B * B ; C = ( <var> * <expr> ) ; end
-				->	begin B = C * A + B * B ; C = ( B * <expr> ) ; end
-				->	begin B = C * A + B * B ; C = ( B * <var> + <expr> ) ; end
-				->	begin B = C * A + B * B ; C = ( B * C + <expr> ) ; end
-				->	begin B = C * A + B * B ; C = ( B * C + <var> ) ; end
-				->	begin B = C * A + B * B ; C = ( B * C + A ) ; end
+		-> 	begin <assign> ; <stmts> end
+		->	begin <var> = <expr> ; <stmts> end
+		->	begin B = <expr> ; <stmts> end
+		->	begin B = <var> * <expr> ; <stmts> end
+		->	begin B = C * <expr> ; <stmts> end
+		->	begin B = C * <var> + <expr> ; <stmts> end
+		->	begin B = C * A + <expr> ; <stmts> end
+		->	begin B = C * A + <var> * <expr> ; <stmts> end
+		->	begin B = C * A + B * <expr> ; <stmts> end
+		->	begin B = C * A + B * <var> ; <stmts> end
+		->	begin B = C * A + B * B ; <stmts> end
+		->	begin B = C * A + B * B ; <assign> ; end
+		->	begin B = C * A + B * B ; <var> = ( <expr> ) ; end
+		->	begin B = C * A + B * B ; C = ( <var> * <expr> ) ; end
+		->	begin B = C * A + B * B ; C = ( B * <expr> ) ; end
+		->	begin B = C * A + B * B ; C = ( B * <var> + <expr> ) ; end
+		->	begin B = C * A + B * B ; C = ( B * C + <expr> ) ; end
+		->	begin B = C * A + B * B ; C = ( B * C + <var> ) ; end
+		->	begin B = C * A + B * B ; C = ( B * C + A ) ; end
 ```
 
 **Parse tree:**
